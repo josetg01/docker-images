@@ -20,6 +20,7 @@ RUN apt update && \
     php8.2-soap \
     php8.2-zip \
     unzip \
+    wget \
     && rm -rf /var/lib/apt/lists/*
 
 #Download facturascripts and extract
