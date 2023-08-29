@@ -22,4 +22,9 @@ RUN apt update && \
     unzip \
     && rm -rf /var/lib/apt/lists/*
 
-#
+#Download facturascripts and extract
+RUN wget https://facturascripts.com/DownloadBuild/1/stable -O /tmp/facturascripts.zip && \
+    unzip -d /tmp/ /tmp/facturascripts.zip && \
+    cp -r /tmp/facturascripts/* /var/www/html/ && \
+    chown www-data:www-data /var/www/html/ -R
+    
