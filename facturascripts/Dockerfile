@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive \
     apt install -y \
-    software-properties-common \
+    software-properties-common && \
     add-apt-repository ppa:ondrej/php -y \
     apt install -y \
     apache2 \
@@ -26,5 +26,8 @@ RUN apt update && \
 RUN wget https://facturascripts.com/DownloadBuild/1/stable -O /tmp/facturascripts.zip && \
     unzip -d /tmp/ /tmp/facturascripts.zip && \
     cp -r /tmp/facturascripts/* /var/www/html/ && \
-    chown www-data:www-data /var/www/html/ -R
+    chown www-data:www-data /var/www/html/ -R && \
+    a2enmod rewrite && \
+    service apache2 restart \
     
+EXPOSE 80
