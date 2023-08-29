@@ -29,6 +29,7 @@ RUN wget https://facturascripts.com/DownloadBuild/1/stable -O /tmp/facturascript
     cp -r /tmp/facturascripts/* /var/www/html/ && \
     chown www-data:www-data /var/www/html/ -R && \
     a2enmod rewrite && \
-    service apache2 restart \
+    service apache2 restart && \
+    rm -r /tmp/*
     
 EXPOSE 80
