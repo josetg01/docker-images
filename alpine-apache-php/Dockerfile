@@ -5,4 +5,4 @@ RUN apk update && \
             php84-mysqli \
             php84-apache2
 
-CMD []
+CMD [ "httpd", "-D", "FOREGROUND" ]
