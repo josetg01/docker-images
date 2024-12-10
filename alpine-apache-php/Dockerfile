@@ -1,4 +1,6 @@
 FROM alpine
+LABEL maintainer="tu_email@ejemplo.com"
+
 RUN apk update && \
     apk add --no-cache apache2 \
             php84 \
