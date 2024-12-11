@@ -1,4 +1,6 @@
 FROM alpine
+
+# Añadir información del mantenedor
 LABEL maintainer="j.m.torregros@gmail.com"
 
 # Instalar Apache y PHP con las extensiones necesarias
