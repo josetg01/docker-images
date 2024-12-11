@@ -15,8 +15,8 @@ RUN mkdir /var/www/htdocs
 # Crear un archivo PHP para probar phpinfo()
 RUN echo "<?php phpinfo(); ?>" > /var/www/htdocs/phpinfo.php && \
     cp /var/www/localhost/htdocs/index.html /var/www/htdocs && \
-    sed -i "s/DocumentRoot\ "/var/www/localhost/htdocs"/DocumentRoot\ "/var/www/htdocs"/" /etc/apache2/httpd.conf && \
-    sed -i "s/DocumentRoot\ "/var/www/localhost/htdocs"/DocumentRoot\ "/var/www/htdocs"/" /etc/apache2/conf.d/ssl.conf
+    sed -i 's/DocumentRoot\ "/var/www/localhost/htdocs"/DocumentRoot\ "/var/www/htdocs"/' /etc/apache2/httpd.conf && \
+    sed -i 's/DocumentRoot\ "/var/www/localhost/htdocs"/DocumentRoot\ "/var/www/htdocs"/' /etc/apache2/conf.d/ssl.conf
     
 # Copiar el script de entrada al contenedor
 COPY entrypoint.sh /entrypoint.sh
