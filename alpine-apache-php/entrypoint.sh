@@ -19,5 +19,8 @@ if [ -z "$PHP_LIMIT_MEMORY" ]; then
   PHP_LIMIT_MEMORY="128M"
 fi
 
+echo "Configurando memory_limit a $MEMORY_LIMIT en php.ini"
+sed -i "s/memory_limit = .*/memory_limit = $MEMORY_LIMIT/" /etc/php84/php.ini
+
 # Ejecutar Apache en primer plano
 httpd -D FOREGROUND
