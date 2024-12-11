@@ -16,7 +16,8 @@ RUN mkdir /var/www/htdocs
 RUN echo "<?php phpinfo(); ?>" > /var/www/htdocs/phpinfo.php
 
 # Cambiar la configuración de Apache para usar /var/www/htdocs como DocumentRoot
-RUN sed -i 's|DocumentRoot "/var/www/localhost/htdocs"|DocumentRoot "/var/www/htdocs"|' /etc/apache2/httpd.conf
+RUN sed -i 's|DocumentRoot "/var/www/localhost/htdocs"|DocumentRoot "/var/www/htdocs"|' /etc/apache2/httpd.conf && \
+    sed -i 's|<Directory "/var/www/localhost/htdocs">|<Directory "/var/www/htdocs">' /etc/apache2/httpd.conf
     
 # Copiar el script de entrada al contenedor
 COPY entrypoint.sh /entrypoint.sh
