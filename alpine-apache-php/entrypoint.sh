@@ -22,5 +22,13 @@ fi
 echo "Configurando memory_limit a $MEMORY_LIMIT en php.ini"
 sed -i "s/memory_limit = .*/memory_limit = $MEMORY_LIMIT/" /etc/php84/php.ini
 
+# Establecer valor por defecto para TimeZone si no está definido
+if [ -z "$TZ" ]; then
+  TZ="UTC"
+fi
+
+echo "Configurando TimeZone a $TZ en php.ini"
+sed -i "s/date.timezone = .*/date.timezone = $TZ/" /etc/php84/php.ini
+
 # Ejecutar Apache en primer plano
 httpd -D FOREGROUND
