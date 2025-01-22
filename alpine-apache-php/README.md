@@ -17,3 +17,5 @@ sudo docker compose up -d
 | MEMORY_LIMIT | 128M, 256M, 512M... | Si |128M|
 | DISPLAY_ERRORS| true, false | Si | false |
 |TZ|Multiples|Si|UTC|
+
+Puede consultar las Zonas de tiempo(TZ) en el siguiente enlace: [clic aqui](https://www.php.net/manual/en/timezones.php)
