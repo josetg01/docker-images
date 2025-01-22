@@ -11,7 +11,7 @@ sudo docker run -d --name apache-php -v /var/www/htdocs:/var/www/htdocs -e MEMOR
 ```
 sudo docker compose up -d
 ```
-## Variables
+## Variables De Entorno
 | Variable | Opciones | Opcional | Por defecto |
 |-|-|-|-|
 | MEMORY_LIMIT | 128M, 256M, 512M... | Si |128M|
