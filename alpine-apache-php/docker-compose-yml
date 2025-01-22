@@ -1,0 +1,10 @@
+services:
+    apache-php:
+        container_name: apache-php
+        volumes:
+            - /var/www/htdocs:/var/www/htdocs
+        environment:
+            - MEMORY_LIMIT=256M
+        ports:
+            - 80:80
+        image: apache-php
