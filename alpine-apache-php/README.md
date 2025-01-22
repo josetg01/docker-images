@@ -18,4 +18,4 @@ sudo docker compose up -d
 | DISPLAY_ERRORS| true, false | Si | false |
 |TZ|Multiples|Si|UTC|
 
-Puede consultar las Zonas de tiempo(TZ) en el siguiente enlace: <a href="https://www.php.net/manual/en/timezones.php" target="_blank">Clic Aqui</a>
+Puede consultar las Zonas de tiempo(TZ) en el siguiente enlace: [Clic Aqui](https://www.php.net/manual/en/timezones.php)
