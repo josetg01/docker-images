@@ -8,7 +8,8 @@ RUN apk update && \
     apk add --no-cache apache2 \
             php84 \
             php84-mysqli \
-            php84-apache2
+            php84-apache2 \
+            tzdata
 
 RUN mkdir /var/www/htdocs
 
