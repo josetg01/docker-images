@@ -5,6 +5,7 @@ services:
             - /var/www/htdocs:/var/www/htdocs
         environment:
             - MEMORY_LIMIT=256M
+            - TZ=Europe/Madrid
         ports:
             - 80:80
         image: apache-php
