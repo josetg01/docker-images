@@ -28,7 +28,7 @@ if [ -z "$TZ" ]; then
 fi
 
 echo "Configurando TimeZone a $TZ en php.ini"
-sed -i "s/date.timezone = .*/date.timezone = $TZ/" /etc/php84/php.ini
+sed -i "s/;date.timezone = .*/date.timezone = $TZ/" /etc/php84/php.ini
 cp /usr/share/zoneinfo/$TZ /etc/localtime
 
 # Ejecutar Apache en primer plano
