@@ -4,7 +4,7 @@ services:
         volumes:
             - /var/www/htdocs:/var/www/htdocs
         environment:
-            - MEMORY_LIMIT=256M
+            - PHP_LIMIT_MEMORY=256M
             - TZ=Europe/Madrid
         ports:
             - 80:80
