@@ -4,8 +4,7 @@ FROM alpine
 LABEL maintainer="j.m.torregros@gmail.com"
 
 # Instalar Apache y PHP con las extensiones necesarias
-RUN apk update && \
-    apk add --no-cache apache2 \
+RUN apk add --no-cache apache2 \
             php84 \
             php84-mysqli \
             php84-apache2 \
