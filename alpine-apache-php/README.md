@@ -5,7 +5,7 @@ sudo docker build -t apache-php .
 ```
 ## ARRANCAR CONTENEDOR
 ```
-sudo docker run -d --name apache-php -v /var/www/htdocs:/var/www/htdocs -e MEMORY_LIMIT=256M -p 80:80 apache-php 
+sudo docker run -d --name apache-php -v /var/www/htdocs:/var/www/htdocs -e PHP_LIMIT_MEMORY=256M -p 80:80 apache-php 
 ```
 ## ARRANCAR CONTENEDOR CON DOCKER-COMPOSE
 ```
@@ -14,7 +14,7 @@ sudo docker compose up -d
 ## Variables De Entorno
 | Variable | Opciones | Opcional | Por defecto |
 |-|-|-|-|
-| MEMORY_LIMIT | 128M, 256M, 512M... | Si |128M|
+| PHP_LIMIT_MEMORY | 128M, 256M, 512M... | Si |128M|
 | DISPLAY_ERRORS| true, false | Si | false |
 |TZ|Multiples|Si|UTC|
 
