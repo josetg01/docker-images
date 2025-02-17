@@ -1,6 +1,6 @@
 FROM alpine
 
-LABEL MANTEINER
+LABEL maintainer="j.m.torregros@gmail.com"
 
 RUN apk update && \
   apk add --no-cache python3 \
