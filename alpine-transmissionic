@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 # Instala Transmission y Clutch
-RUN apk update && apk add transmission-daemon clutch
+RUN apk update && apk add --no-cache transmission-daemon clutch
 
 # Copia y configura el archivo settings.json
 COPY settings.json /var/lib/transmission/config/settings.json
